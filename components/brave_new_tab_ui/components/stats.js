@@ -3,6 +3,8 @@
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 const React = require('react')
+const { DataBlock, DataItem } = require('brave-ui/dataBlock')
+require('../../fonts/poppins.css')
 
 class Stats extends React.Component {
   get millisecondsPerItem () {
@@ -53,31 +55,33 @@ class Stats extends React.Component {
     const adblockCount = this.adblockCount
     const httpsUpgradedCount = this.httpsUpgradedCount
     const timeSaved = this.estimatedTimeSaved
-    const blockedArgs = JSON.stringify({
-      adblockCount,
-      trackedBlockersCount,
-      httpsUpgradedCount
-    })
-    return <ul className='statsContainer'>
-      <li className='statsBlock'>
-        <span className='counter trackers'>{trackedBlockersCount.toLocaleString()}</span>
-        <span className='statsText' i18n-content='trackersBlocked' data-l10n-args={blockedArgs} />
-      </li>
-      <li className='statsBlock'>
-        <span className='counter ads'>{adblockCount.toLocaleString()}</span>
-        <span className='statsText' i18n-content='adsBlocked' data-l10n-args={blockedArgs} />
-      </li>
-      <li className='statsBlock'>
-        <span className='counter https'>{httpsUpgradedCount.toLocaleString()}</span>
-        <span className='statsText' i18n-content='httpsUpgraded' data-l10n-args={blockedArgs} />
-      </li>
-      <li className='statsBlock'>
-        <span className='counter timeSaved'>
-          {timeSaved.value} <span className='text' i18n-content={timeSaved.id} />
-        </span>
-        <span className='statsText' i18n-content='estimatedTimeSaved' />
-      </li>
-    </ul>
+
+    return (
+      <section style={{
+        color: 'rgba(255,255,255,0.8)',
+        fontFamily: '"Poppins", sans-serif'
+      }}>
+        <DataBlock>
+          <DataItem
+            color='#f39030'
+            description={window.loadTimeData.getString('trackersBlocked')}
+            counter={trackedBlockersCount.toLocaleString()} />
+          <DataItem
+            color='#fe521d'
+            description={window.loadTimeData.getString('adsBlocked')}
+            counter={adblockCount.toLocaleString()} />
+          <DataItem
+            color='#0796fa'
+            description={window.loadTimeData.getString('httpsUpgraded')}
+            counter={httpsUpgradedCount.toLocaleString()} />
+          <DataItem
+            color='#999999'
+            counter={timeSaved.value}
+            text={window.loadTimeData.getString(timeSaved.id)}
+            description={window.loadTimeData.getString('estimatedTimeSaved')} />
+        </DataBlock>
+      </section>
+    )
   }
 }
 module.exports = Stats

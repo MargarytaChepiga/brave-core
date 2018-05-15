@@ -10,15 +10,17 @@ const HTML5Backend = require('react-dnd-html5-backend')
 const newTabActions = require('../actions/newTabActions')
 
 // Components
+const { Grid, Column, Clock } = require('brave-ui')
 const Stats = require('./stats')
-const Clock = require('./clock')
 const Block = require('./block')
 const FooterInfo = require('./footerInfo')
 const SiteRemovalNotification = require('./siteRemovalNotification')
-// const NewPrivateTab = require('./newprivatetab')
+const NewPrivateTab = require('./newPrivateTab')
 
+// Assets
 require('../../styles/newtab.less')
 require('font-awesome/css/font-awesome.css')
+require('../../fonts/poppins.css')
 
 class NewTabPage extends React.Component {
   constructor (props) {
@@ -99,9 +101,7 @@ class NewTabPage extends React.Component {
     }
 
     if (this.props.newTabData.isIncognito) {
-      // TODO
-      // return <NewPrivateTab newTabData={newTabData} />
-      return null
+      return <NewPrivateTab stats={newTabData.stats} />
     }
 
     // don't render until object is found
@@ -115,59 +115,68 @@ class NewTabPage extends React.Component {
       backgroundProps.style = this.props.newTabData.backgroundImage.style
       gradientClassName = 'bgGradient'
     }
-    return <div data-test-id='dynamicBackground' className='dynamicBackground' {...backgroundProps}>
-      {
-        this.showImages
-          ? <img src={this.props.newTabData.backgroundImage.source} onError={this.onBackgroundImageLoadFailed} data-test-id='backgroundImage' />
-          : null
-      }
-      <div data-test-id={this.showImages ? 'bgGradient' : 'gradient'} className={gradientClassName} />
-      <div className='content'>
-        <main>
-          <div className='statsBar'>
-            <Stats stats={newTabData.stats} />
-            <Clock />
-          </div>
-          <div className='topSitesContainer'>
-            <nav className='topSitesGrid'>
-              {
-                this.props.newTabData.gridSites.map((site, i) =>
-                  <Block
-                    key={site.url}
-                    id={site.url}
-                    title={site.title}
-                    href={site.url}
-                    favicon={site.favicon}
-                    letter={site.letter}
-                    thumb={site.thumb}
-                    style={{backgroundColor: site.themeColor || site.computedThemeColor}}
-                    onToggleBookmark={this.onToggleBookmark.bind(this, site)}
-                    onPinnedTopSite={this.onTogglePinnedTopSite.bind(this, site)}
-                    onIgnoredTopSite={this.onIgnoredTopSite.bind(this, site)}
-                    onDraggedSite={this.onDraggedSite}
-                    onDragEnd={this.onDragEnd}
-                    isPinned={site.pinned}
-                    isBookmarked={site.bookmarked}
-                  />
-                )
-              }
-            </nav>
-          </div>
-        </main>
+    return (
+      <div data-test-id='dynamicBackground' className='dynamicBackground' {...backgroundProps}>
         {
-          this.props.newTabData.showSiteRemovalNotification
-            ? <SiteRemovalNotification
-              onUndoIgnoredTopSite={this.onUndoIgnoredTopSite}
-              onRestoreAll={this.onUndoAllSiteIgnored}
-              onCloseNotification={this.onHideSiteRemovalNotification}
-              />
+          this.showImages
+            ? <img src={this.props.newTabData.backgroundImage.source} onError={this.onBackgroundImageLoadFailed} data-test-id='backgroundImage' />
             : null
         }
-        {
-          <FooterInfo backgroundImage={this.props.newTabData.backgroundImage} />
-    }
+        <div data-test-id={this.showImages ? 'bgGradient' : 'gradient'} className={gradientClassName} />
+        <div className='content'>
+          <main style={{
+            fontFamily: '"Poppins", sans-serif',
+            color: 'rgba(255,255,255,0.8)'
+          }}>
+            <Grid columns={3} padding='40px 0'>
+              <Column size={2}>
+                <Stats stats={newTabData.stats} />
+              </Column>
+              <Column size={1} align='flex-end'>
+                <Clock color='rgba(255,255,255,0.8)' />
+              </Column>
+            </Grid>
+            <div className='topSitesContainer'>
+              <nav className='topSitesGrid'>
+                {
+                  this.props.newTabData.gridSites.map((site, i) =>
+                    <Block
+                      key={site.url}
+                      id={site.url}
+                      title={site.title}
+                      href={site.url}
+                      favicon={site.favicon}
+                      letter={site.letter}
+                      thumb={site.thumb}
+                      style={{backgroundColor: site.themeColor || site.computedThemeColor}}
+                      onToggleBookmark={this.onToggleBookmark.bind(this, site)}
+                      onPinnedTopSite={this.onTogglePinnedTopSite.bind(this, site)}
+                      onIgnoredTopSite={this.onIgnoredTopSite.bind(this, site)}
+                      onDraggedSite={this.onDraggedSite}
+                      onDragEnd={this.onDragEnd}
+                      isPinned={site.pinned}
+                      isBookmarked={site.bookmarked}
+                    />
+                  )
+                }
+              </nav>
+            </div>
+          </main>
+          {
+            this.props.newTabData.showSiteRemovalNotification
+              ? <SiteRemovalNotification
+                onUndoIgnoredTopSite={this.onUndoIgnoredTopSite}
+                onRestoreAll={this.onUndoAllSiteIgnored}
+                onCloseNotification={this.onHideSiteRemovalNotification}
+                />
+              : null
+          }
+          {
+            <FooterInfo backgroundImage={this.props.newTabData.backgroundImage} />
+      }
+        </div>
       </div>
-    </div>
+    )
   }
 }
 

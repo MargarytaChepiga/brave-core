@@ -68,7 +68,57 @@
       <include name="IDR_BRAVE_COMMON_FONT_AWESOME_3" file="${root_gen_dir}/brave/b06871f281fee6b241d60582ae9369b9.ttf" type="BINDATA" use_base_dir="false" />
       <include name="IDR_BRAVE_COMMON_TOOLBAR_IMG" file="../img/toolbar/menu_btn.svg" type="BINDATA" />
 
-      <!-- Browser resources -->
+      <!-- Fonts: Poppins -->
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_100_ITALIC_DEVANAGARI" file="${root_gen_dir}/brave/282305d03e3b7232c1a4ed55ce7583a2.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_100_NORMAL_DEVANAGARI" file="${root_gen_dir}/brave/b2f34f2b906c2a434486857b67c0c066.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_200_ITALIC_DEVANAGARI" file="${root_gen_dir}/brave/c4c8132e6d6367c5305d4eb9f79538cc.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_200_NORMAL_DEVANAGARI" file="${root_gen_dir}/brave/1ff8e6c958ca4fa6d8e8680f32cddd0d.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_300_ITALIC_DEVANAGARI" file="${root_gen_dir}/brave/c838a7c27758db13e106ecfccffacff3.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_300_NORMAL_DEVANAGARI" file="${root_gen_dir}/brave/817b30cf208868ef041477ce999af40b.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_400_ITALIC_DEVANAGARI" file="${root_gen_dir}/brave/17d173bb066b4ac1fa10c2409b421e8e.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_400_NORMAL_DEVANAGARI" file="${root_gen_dir}/brave/8a06c170adbf19e0dffcbe868719e6ce.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_500_ITALIC_DEVANAGARI" file="${root_gen_dir}/brave/5fb233db2e5287e5d5bef4ad81f28ad6.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_500_NORMAL_DEVANAGARI" file="${root_gen_dir}/brave/de652f63aa5671c535afca303c5816eb.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_600_ITALIC_DEVANAGARI" file="${root_gen_dir}/brave/2212626fea093a7ce9ed123a8137874e.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_600_NORMAL_DEVANAGARI" file="${root_gen_dir}/brave/b188954ed63068df7cbdd685eaf0a2b0.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_700_ITALIC_DEVANAGARI" file="${root_gen_dir}/brave/46215b916a1eb4cb6e59d9d6de201f33.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_700_NORMAL_DEVANAGARI" file="${root_gen_dir}/brave/84b9421628180c9167e231dedd23591a.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_800_ITALIC_DEVANAGARI" file="${root_gen_dir}/brave/b13cb35b41cc0d5fe12000916b98d95d.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_800_NORMAL_DEVANAGARI" file="${root_gen_dir}/brave/f2b8ee24163d55d293bd073a5258908b.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_900_ITALIC_DEVANAGARI" file="${root_gen_dir}/brave/867d78c3a1c8f6a6ec40267b535c2ba4.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDT_BRAVE_TEXT_FONT_POPPINS_900_NORMAL_DEVANAGARI" file="${root_gen_dir}/brave/7899ca640abe123a9ef8329762dc54e8.woff2" type="BINDATA" use_base_dir="false" />
+
+      <!-- Fonts: Muli -->
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_200_ITALIC_LATIN_EXT" file="${root_gen_dir}/brave/0e0d214cf1ebb8de4fe8f7fcf7f09274.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_200_ITALIC_LATIN" file="${root_gen_dir}/brave/6b2996d367c5856a42f223ae462114c0.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_300_ITALIC_LATIN_EXT" file="${root_gen_dir}/brave/0b0967db44ffa0dcff516f9b608cc3f9.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_300_ITALIC_LATIN" file="${root_gen_dir}/brave/339d6c2c5ca4b27bb76d49afb34dddf6.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_400_ITALIC_LATIN_EXT" file="${root_gen_dir}/brave/1559d981ccec8dc4b4feb9043271ab3d.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_400_ITALIC_LATIN" file="${root_gen_dir}/brave/187987e45dd0477eef7303ae467324e4.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_600_ITALIC_LATIN_EXT" file="${root_gen_dir}/brave/b9009a9ec1d9523408bbc5e8664d89f9.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_600_ITALIC_LATIN" file="${root_gen_dir}/brave/e715a720765a9f67b391874f7c741c7d.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_700_ITALIC_LATIN_EXT" file="${root_gen_dir}/brave/3cdef88acafd738b333bcb7b14925baa.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_700_ITALIC_LATIN" file="${root_gen_dir}/brave/d7fc58ebe94a8b005b6f9cb4bccaf5aa.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_800_ITALIC_LATIN_EXT" file="${root_gen_dir}/brave/458d41efe9564ce2f0153e0439b78ff2.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_800_ITALIC_LATIN" file="${root_gen_dir}/brave/cb9fe5f6a2ef4aaf7e46c9d543a91dd5.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_900_ITALIC_LATIN_EXT" file="${root_gen_dir}/brave/c3623463b6828827f840044c53e12db4.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_900_ITALIC_LATIN" file="${root_gen_dir}/brave/5e18f97c019d723846fa80f3d5bf2f46.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_200_NORMAL_LATIN_EXT" file="${root_gen_dir}/brave/167882d7fa8fc7cce5cdf6eb6ed20bd3.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_200_NORMAL_LATIN" file="${root_gen_dir}/brave/c048e5552b910480d7b7d3fcb28c69fd.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_300_NORMAL_LATIN_EXT" file="${root_gen_dir}/brave/a89f9444ea1b68d44f4120e250d2898f.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_300_NORMAL_LATIN" file="${root_gen_dir}/brave/e014ef621b16d3424c3779914b994715.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_400_NORMAL_LATIN_EXT" file="${root_gen_dir}/brave/7dd94f3f5749c7866546c7694980ad76.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_400_NORMAL_LATIN" file="${root_gen_dir}/brave/f0e1ee92a25c8246a4a1fc28b3f77084.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_600_NORMAL_LATIN_EXT" file="${root_gen_dir}/brave/3bef707814df0c192a19df4f31518b26.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_600_NORMAL_LATIN" file="${root_gen_dir}/brave/d0c20b36cf1fedcf75230805055f517b.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_700_NORMAL_LATIN_EXT" file="${root_gen_dir}/brave/c0cf0365a6780870d455120fcc83b425.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_700_NORMAL_LATIN" file="${root_gen_dir}/brave/03c3ebc1b575991ec582751b6b98e562.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_800_NORMAL_LATIN_EXT" file="${root_gen_dir}/brave/6d23ab5117038380fd25f70909340a87.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_800_NORMAL_LATIN" file="${root_gen_dir}/brave/ed853eeb06da3de8325c2a4abddc30c8.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_900_NORMAL_LATIN_EXT" file="${root_gen_dir}/brave/7d0f2d0b966f31e8bc75bcf6954b6b49.woff2" type="BINDATA" use_base_dir="false" />
+      <include name="IDR_BRAVE_TEXT_FONT_MULI_900_NORMAL_LATIN" file="${root_gen_dir}/brave/18a1df59976e7a18fed257368aaafa9f.woff2" type="BINDATA" use_base_dir="false" />
+
+      <!-- Browser resrouces -->
       <include name="IDR_BRAVE_EXTENSON" file="../../vendor/brave-extension/build/manifest.json" type="BINDATA" />
 
       <!-- WebUI payments resources -->
@@ -82,6 +132,7 @@
       <include name="IDR_BRAVE_NEW_TAB_IMG4" file="../img/newtab/history_btn.svg" type="BINDATA" />
       <include name="IDR_BRAVE_NEW_TAB_IMG2" file="../img/newtab/settings_prefs_btn.svg" type="BINDATA" />
       <include name="IDR_BRAVE_NEW_TAB_IMG14" file="../img/newtab/newtab_stock_image.jpg" type="BINDATA" />
+      <include name="IDR_BRAVE_NEW_TAB_PRIVATE_ICON" file="../img/newtab/private_tab_pagearea_icon.svg" type="BINDATA" />
 
     </includes>
     <messages fallback_to_english="true">
@@ -101,6 +152,12 @@
       <message name="IDS_BRAVE_NEW_TAB_HOURS" desc="Displays the number of hours.">hours</message>
       <message name="IDS_BRAVE_NEW_TAB_DAY" desc="Displays the number of days.">day</message>
       <message name="IDS_BRAVE_NEW_TAB_DAYS" desc="Displays the number of days.">days</message>
+      <message name="IDS_BRAVE_PRIVATE_NEW_TAB_TITLE" desc="Displays the private new tab title.">This is a Private Tab</message>
+      <message name="IDS_BRAVE_PRIVATE_NEW_TAB_DISCLAIMER_1" desc="Displays info about private new tab default privacy settings.">Private tabs are not logged in page history or counted in Brave Payments calculations. Private tabs and their cookies vanish when the browser is closed.</message>
+      <message name="IDS_BRAVE_PRIVATE_NEW_TAB_DISCLAIMER_2" desc="Displays info about how private the private new tab is.">Please note: Even though sites you visit in private tabs are not saved locally, they do not make you anonymous or invisible to your ISP, your employer, or to the sites you are visiting.</message>
+      <message name="IDS_BRAVE_PRIVATE_NEW_TAB_DUCKDUCKGO_SEARCH_INFO" desc="Displays info about DuckDuckGo searches in private new tab.">With private search, Brave will use DuckDuckGo to answer your searches while you are in this private tab. DuckDuckGo is a search engine that does not track your search history, enabling you to search privately.</message>
+      <message name="IDS_BRAVE_PRIVATE_NEW_TAB_SEARCH_TOGGLE_LABEL" desc="Displays the toggle label for switching private search to DuckDuckGo.">
+PrivateSearch with DuckDuckGo</message>
     </messages>
   </release>
 </grit>
